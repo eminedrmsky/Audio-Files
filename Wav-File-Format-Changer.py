@@ -1,3 +1,8 @@
+#Created by Emine DURMUŞKAYA
+#date 2021.08.24
+#Changes PCM format of Wav files in chosen path, also adjusts the volume of the sound
+################################################################################################
+
 import os, sys                     #for reaching files in the system
 import soundfile as sf         
 from soundfile import SoundFile    #for reading chracteristic of soundfiles
@@ -14,7 +19,7 @@ for file in os.listdir(path):                                           #for all
 
   if (file.endswith('.wav')):   
     myfile=SoundFile(path+file)    
-    print(myfile.subtype_info)                                     #find subtype of  file
+    print(myfile.subtype_info)                                          #find subtype of  file
 
     if(myfile.subtype_info != 'Signed 16 bit PCM'):                   
         name= file.rsplit('.',1)                                        #find name of file
